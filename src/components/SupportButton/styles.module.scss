@@ -1,0 +1,22 @@
+.donateContainer {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 999;
+
+  button {
+    border: 0;
+    background-color: #FFB800;
+    border-radius: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 1.5rem;
+    font-weight: bold;
+    transition: filter .3s;
+
+    &:hover {
+      filter: brightness(.8);
+    }
+  }
+}
