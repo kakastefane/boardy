@@ -1,5 +1,5 @@
 import { AppProps } from 'next/app';
-import { SessionProvider as NextAuthProvider } from 'next-auth/react';
+import { Provider as NextAuthProvider } from 'next-auth/client';
 
 import { Header } from '../components/Header';
 
