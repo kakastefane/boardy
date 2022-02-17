@@ -1,11 +1,12 @@
 import { useState } from 'react';
 import { GetStaticProps } from 'next';
 import Head from 'next/head'
+import Image from 'next/image';
 
 import firebase from '../services/firebaseConnection';
 
 import styles from '../styles/home.module.scss';
-
+import boardUser from '../../public/images/board-user.svg';
 
 type Data = {
   id: string;
@@ -26,7 +27,7 @@ export default function Home({ data }: HomeProps) {
         <title>Boardy - Organizando suas tarefas!</title>
       </Head>
       <main className={styles.contentContainer}>
-        <img src="/images/board-user.svg" alt="Boardy" />
+        <Image src={boardUser} alt="Boardy" />
 
         <section className={styles.callToAction}>
           <h1>Uma ferramenta para o seu dia a dia. Escreva, planeje e se organize.</h1>

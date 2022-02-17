@@ -1,12 +1,14 @@
+import { useState } from 'react';
 import { GetServerSideProps } from 'next';
 import { getSession } from 'next-auth/client';
 import { PayPalButtons } from '@paypal/react-paypal-js';
 import Head from 'next/head';
+import Image from 'next/image';
 
 import firebase from '../../services/firebaseConnection';
 
 import styles from './styles.module.scss';
-import { useState } from 'react';
+import rocket from '../../../public/images/rocket.svg';
 
 interface DonateProps {
   user: {
@@ -38,7 +40,7 @@ export default function Donate({ user }: DonateProps) {
         <title>Boardy - Organizando suas tarefas!</title>
       </Head>
       <main className={styles.contentContainer}>
-        <img src="/images/rocket.svg" alt="Foguete" />
+        <Image src={rocket} alt="Foguete" />
 
         {vip && (
           <div className={styles.vip}>
